@@ -1,0 +1,119 @@
+*PPD-Adobe: "4.3"
+*FormatVersion: "4.3"
+*FileVersion: "8.2503"
+*LanguageEncoding: ISOLatin1
+*LanguageVersion: Italian
+*Manufacturer: "Kyocera"
+*Product: "(TASKalfa MZ2501ci)"
+*PSVersion: "(3011.103) 1"
+*ModelName: "Kyocera TASKalfa MZ2501ci KPDL"
+*ShortNickName: "TASKalfa MZ2501ci"
+*NickName: "Kyocera TASKalfa MZ2501ci KPDL (1989)"
+*PCFileName: "KCMZ2501.PPD"
+
+*LanguageLevel: "3"
+*ColorDevice: True
+*DefaultColorSpace: CMYK
+*ContoneOnly: False
+*AccurateScreensSupport: True
+*TTRasterizer: Type42
+*Throughput: "25"
+*FileSystem: True
+*FreeVM: "32000000"
+
+*Protocols: PJL TBCP
+*JCLBegin: "<1B>%-12345X@PJL JOB<0A>"
+*JCLToPSInterpreter: "@PJL ENTER LANGUAGE=POSTSCRIPT<0A>"
+*JCLEnd: "<1B>%-12345X@PJL EOJ<0A><1B>%-12345X"
+
+*OpenUI *PagePolicy/Page Policy: PickOne
+*OrderDependency: 15 AnySetup *PagePolicy
+*DefaultPagePolicy: On
+*PagePolicy On/AutoSizeSelect: "<< /DeferredMediaSelection true >> setpagedevice"
+*CloseUI: *PagePolicy
+
+*OpenUI *PageSize/Formato pagina: PickOne
+*OrderDependency: 40 AnySetup *PageSize
+*DefaultPageSize: A4
+*PageSize A4/A4: "<< /Policies << /PageSize 7 >> /PageSize [595 842] /ImagingBBox null >> setpagedevice"
+*PageSize A3/A3: "<< /Policies << /PageSize 7 >> /PageSize [842 1191] /ImagingBBox null >> setpagedevice"
+*PageSize A5/A5: "<< /Policies << /PageSize 7 >> /PageSize [421 595] /ImagingBBox null >> setpagedevice"
+*PageSize Letter/Letter: "<< /Policies << /PageSize 7 >> /PageSize [612 792] /ImagingBBox null >> setpagedevice"
+*CloseUI: *PageSize
+
+*OpenUI *PageRegion: PickOne
+*OrderDependency: 40 AnySetup *PageRegion
+*DefaultPageRegion: A4
+*PageRegion A4/A4: "<< /Policies << /PageSize 7 >> /PageSize [595 842] /ImagingBBox null >> setpagedevice"
+*PageRegion A3/A3: "<< /Policies << /PageSize 7 >> /PageSize [842 1191] /ImagingBBox null >> setpagedevice"
+*PageRegion A5/A5: "<< /Policies << /PageSize 7 >> /PageSize [421 595] /ImagingBBox null >> setpagedevice"
+*PageRegion Letter/Letter: "<< /Policies << /PageSize 7 >> /PageSize [612 792] /ImagingBBox null >> setpagedevice"
+*CloseUI: *PageRegion
+
+*DefaultImageableArea: A4
+*ImageableArea A4/A4: "12 10 583 832"
+*ImageableArea A3/A3: "12 10 830 1181"
+*ImageableArea A5/A5: "12 10 409 585"
+*ImageableArea Letter/Letter: "12 08 600 784"
+
+*DefaultPaperDimension: A4
+*PaperDimension A4/A4: "595 842"
+*PaperDimension A3/A3: "842 1191"
+*PaperDimension A5/A5: "421 595"
+*PaperDimension Letter/Letter: "612 792"
+
+*OpenUI *InputSlot/Alimentazione: PickOne
+*OrderDependency: 30 AnySetup *InputSlot
+*DefaultInputSlot: PF730A
+*InputSlot PF730A/Cassetto 1: "<< /ManualFeed false >> setpagedevice statusdict begin 0 setpapertray end"
+*InputSlot PF730B/Cassetto 2: "<< /ManualFeed false >> setpagedevice statusdict begin 1 setpapertray end"
+*InputSlot PF730C/Cassetto 3: "<< /ManualFeed false >> setpagedevice statusdict begin 4 setpapertray end"
+*InputSlot PF730D/Cassetto 4: "<< /ManualFeed false >> setpagedevice statusdict begin 5 setpapertray end"
+*InputSlot MF1/Vassoio bypass: "<< /ManualFeed false >> setpagedevice statusdict begin 3 setpapertray end"
+*CloseUI: *InputSlot
+
+*OpenUI *Resolution/Risoluzione: PickOne
+*OrderDependency: 10 AnySetup *Resolution
+*DefaultResolution: 600dpi
+*Resolution 600dpi/600 dpi: "<</HWResolution [600 600]>> setpagedevice"
+*Resolution 1200dpi/1200 dpi: "<</HWResolution [1200 1200]>> setpagedevice"
+*CloseUI: *Resolution
+
+*OpenUI *ColorModel/Colore: PickOne
+*OrderDependency: 10 AnySetup *ColorModel
+*DefaultColorModel: CMYK
+*ColorModel CMYK/A colori: "<< /ProcessColorModel /DeviceCMYK >> setpagedevice"
+*ColorModel Gray/Bianco e Nero: "<< /ProcessColorModel /DeviceGray >> setpagedevice"
+*CloseUI: *ColorModel
+
+*OpenUI *Duplex/Fronte Retro: PickOne
+*OrderDependency: 50 AnySetup *Duplex
+*DefaultDuplex: None
+*Duplex None/Nessuno: "statusdict begin false setduplexmode false settumble end"
+*Duplex DuplexNoTumble/Lato Lungo: "statusdict begin true setduplexmode false settumble end"
+*Duplex DuplexTumble/Lato Corto: "statusdict begin true setduplexmode true settumble end"
+*CloseUI: *Duplex
+
+*OpenUI *Collate/Fascicola: Boolean
+*OrderDependency: 19 AnySetup *Collate
+*DefaultCollate: True
+*Collate True/Attivo: "<</Collate true>> setpagedevice"
+*Collate False/Disattivato: "<</Collate false>> setpagedevice"
+*CloseUI: *Collate
+
+*OpenUI *KmManagment/Contabilita processi: PickOne
+*OrderDependency: 60 AnySetup *KmManagment
+*DefaultKmManagment: MG01040
+*KmManagment MG01040/Sabina Berselli: "(01040) statusdict /setmanagementnumber get exec"
+*KmManagment Default/Disattivato: ""
+*CloseUI: *KmManagment
+
+*DefaultFont: Courier
+*Font Courier: Standard "(002.004S)" Standard ROM
+*Font Courier-Bold: Standard "(002.004S)" Standard ROM
+*Font Courier-Oblique: Standard "(002.004S)" Standard ROM
+*Font Helvetica: Standard "(001.006S)" Standard ROM
+*Font Helvetica-Bold: Standard "(001.007S)" Standard ROM
+*Font Times-Roman: Standard "(001.007S)" Standard ROM
+*Font Times-Bold: Standard "(001.007S)" Standard ROM
+*Font Symbol: Special "(001.007S)" Special ROM
